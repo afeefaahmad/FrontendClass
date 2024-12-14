@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            max-height: 1000px;  /*adjust as per need while adding other sections */
+        }
+
+        .cont {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            background-color: #131921;
+            margin: 0px;
+            height: 60px;
+        }
+
+        .cont>div:nth-child(1) {
+            grid-column: 1.5fr;
+            height: 60px;
+            color: #ccc;
+
+        }
+
+        .cont>div:nth-child(2) {
+            padding: 1.5px;
+            text-align: center;
+            grid-column: span 2;
+            height: 60px;
+            color: #ccc;
+            margin-left: 8px;
+            margin-top: 3px;
+
+        }
+
+        .img1 {
+            width: 108px;
+            height: 60px;
+            margin-left: 5px;
+        }
+
+        .img2 {
+            width: 23px;
+            height: 33px;
+
+        }
+
+        .cont>div:nth-child(3) {
+            grid-column: span 5;
+            height: 46px;
+            background-color: #eee;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            /* border: 1px solid black; */
+            border-radius: 6px;
+            margin: 5px 5px;
+        }
+
+        .n1 {
+            grid-column: span 1;
+
+        }
+
+        .n2 {
+            grid-column: span 8;
+        }
+
+        .n3 {
+            grid-column: span 1;
+            background-color: #febd69;
+            border-radius: 0px 6px 6px 0px;
+        }
+
+        .select1 {
+            height: 40px;
+            width: 20px;
+        }
+
+        .cont>div:nth-child(4) {
+            grid-column: span 1;
+            height: 60px;
+            color: whitesmoke;
+            display: flex;
+            gap: 8px;
+            margin: 25px 15px;
+            text-align: center;
+
+
+
+        }
+
+        .cont>div:nth-child(5) {
+            grid-column: span 1;
+            height: 60px;
+            color: whitesmoke;
+            display: block;
+            padding-top: 2px;
+            margin-top: 8px;
+        }
+
+        .cont>div:nth-child(6) {
+            grid-column: span 1;
+            height: 60px;
+            color: white;
+            text-align: center;
+            padding-top: 2px;
+            margin-top: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .cont>div:nth-child(7) {
+            grid-column: span 1;
+            height: 60px;
+            background-color: #131921;
+            justify-content: center;
+        }
+
+        /* 2nd Navbar */
+        .cont2 {
+            display: flex;
+            padding: 2px 35px 0px 15px;
+            background-color: #232f3e;
+            margin: 0px;
+            height: 26px;
+            color: whitesmoke;
+            font-size: small;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+
+        /* 3rd Section ie. Gallary */
+        .cont3 {
+            background: url(./HeroBg.jpg);
+            background-repeat: no-repeat;
+            background-size: 1349px;
+            height: 450px;
+            width: 100%;
+            background-color: #ccc;
+
+        }
+
+        .cont3_1 {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 0px;
+            /* padding: 5px; */
+            height: 200px;
+            width: 100%;
+
+        }
+
+        .i1 {
+            margin-top: 250px;
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 370px;
+            width: 294px;
+            grid-column: span 2;
+            background-color: white;
+            padding: 20px 0px 20px 0px;
+            text-align: center;
+
+        }
+
+        .galary1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 20px;
+            height: 20px;
+        }
+
+        .g1i1 {
+            grid-column: span 1;
+        }
+
+        .g1i2 {
+            grid-column: span 1;
+        }
+
+        .g1i3 {
+            grid-column: span 1;
+        }
+
+        .g1i4 {
+            grid-column: span 1;
+        }
+
+        .i2 {
+            margin-top: 250px;
+            margin-right: 20px;
+            margin-left: 20px;
+            height: 370px;
+            width: 294px;
+            grid-column: span 2;
+            background-color: white;
+            padding: 20px 0px 20px 0px;
+            text-align: center;
+
+        }
+
+        .galary2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 20px;
+            height: 20px;
+        }
+
+
+
+        .i3 {
+            margin-top: 250px;
+            margin-right: 20px;
+            margin-left: 20px;
+            height: 370px;
+            width: 294px;
+            grid-column: span 2;
+            background-color: white;
+            padding: 20px 0px 20px 0px;
+            text-align: center;
+        }
+
+        .galary3 {
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 20px;
+            height: 20px;
+        }
+
+        .i4 {
+            margin-top: 250px;
+            margin-right: 20px;
+            margin-left: 20px;
+            height: 110px;
+            width: 294px;
+            grid-column: span 2;
+            background-color: white;
+
+        }
+
+
+        .i4_1 {
+            margin-right: 20px;
+            height: 260px;
+            width: 294px;
+            grid-column: span 2;
+            background-color: white;
+            margin-top: 65px;
+        }
+
+
+        /* 4th Section ie. Gallary */
+        .cont4 {
+            background-size: 1349px;
+            height: 700px;
+            width: 100%;
+            background-color: #eee;
+
+        }
+
+        .cont4_1 {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 0px;
+            /* padding: 5px; */
+            height: 3900px;
+            width: 100%;
+
+        }
+
+        .i1 {
+            margin-top: 250px;
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 370px;
+            width: 294px;
+            grid-column: span 2;
+            background-color: white;
+            padding: 20px 0px 20px 0px;
+            text-align: center;
+
+        }
+
+        .galary1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 20px;
+            height: 20px;
+        }
+
+        .g1i1 {
+            grid-column: span 1;
+        }
+
+        .g1i2 {
+            grid-column: span 1;
+        }
+
+        .g1i3 {
+            grid-column: span 1;
+        }
+
+        .g1i4 {
+            grid-column: span 1;
+        }
+
+        .i2 {
+            margin-top: 250px;
+            margin-right: 20px;
+            margin-left: 20px;
+            height: 370px;
+            width: 294px;
+            grid-column: span 2;
+            background-color: white;
+            padding: 20px 0px 20px 0px;
+            text-align: center;
+
+        }
+
+        .galary2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 20px;
+            height: 20px;
+        }
+
+
+
+        .i3 {
+            margin-top: 250px;
+            margin-right: 20px;
+            margin-left: 20px;
+            height: 370px;
+            width: 294px;
+            grid-column: span 2;
+            background-color: white;
+            padding: 20px 0px 20px 0px;
+            text-align: center;
+        }
+
+        .galary3 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 20px;
+            height: 20px;
+        }
+
+        .i4_nextrow {
+            margin-top: 250px;
+            margin-right: 20px;
+            margin-left: 20px;
+            height: 370px;
+            width: 294px;
+            grid-column: span 2;
+            background-color: white;
+            padding: 20px 0px 20px 0px;
+            text-align: center;
+        }
+
+        .cont5 {
+            background-color: #eee;
+            height: 300px;
+            color: whitesmoke;
+            font-size: small;
+            justify-content: space-between;
+
+            font-weight: bold;
+        }
+
+        .heading {
+            margin: 0px 20px 0px 20px;
+            background-color: white;
+            padding: 20px 35px 10px 35px;
+            width: 1240px;
+            display: flex;
+        }
+
+        .horizont_galary {
+            margin: 0px 20px 0px 20px;
+            padding: 0px 30px 20px 30px;
+            justify-content: space-around;
+            display: flex;
+            background-color: white;
+        }
+
+        .g1,
+        .g2,
+        .g3,
+        .g4,
+        .g5,
+        .g6 {
+
+            height: 200px;
+            width: 200px;
+            background-color: #0b3971;
+        }
+
+
+        .footer {
+            background-color: #131A22;
+            height: 320px;
+            width: 100%;
+
+        }
+
+        .foot_1 {
+            display: grid;
+            align-items: center;
+            padding: 50px 0px 30px 0px;
+            justify-items: center;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+
+        }
+
+        .f1 {
+
+            font-weight: bold;
+            font-family: serif;
+            font-size: 12px;
+            grid-column: 2;
+            justify-content: end;
+            
+        }
+
+        .f2 {
+
+            font-weight: bold;
+            font-family: serif;
+            font-size: 12px;
+            grid-column: 3;
+            justify-content: end;
+        }
+
+        .f3 {
+            font-weight: bold;
+            font-family: serif;
+            font-size: 12px;
+            grid-column: 4;
+            justify-content: end;
+        }
+
+        .f4 {
+
+            font-weight: bold;
+            font-family: serif;
+            font-size: 12px;
+            grid-column: 5;
+            justify-content: end;
+        }
+
+        .f5 {
+            margin-top: 30px;
+            font-weight: bold;
+            font-family: serif;
+            font-size: 12px;
+            grid-column: 2;
+            justify-content: end;
+        }
+
+        .f6 {
+            margin-top: 30px;
+            font-weight: bold;
+            font-family: serif;
+            font-size: 12px;
+            grid-column: 3;
+            justify-content: end;
+        }
+
+        .f7 {
+            margin-top: 30px;
+            font-weight: bold;
+            font-family: serif;
+            font-size: 12px;
+            grid-column: 4;
+            justify-content: end;
+        }
+
+        .f8 {
+            margin-top: 30px;
+            font-weight: bold;
+            font-family: serif;
+            font-size: 12px;
+            grid-column: 5;
+            justify-content: end;
+        }
+
+        .foot_2 {
+            display: grid;
+            align-items: center;
+            padding: 50px 0px 20px 0px;
+            justify-items: center;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+
+        }
+        .f2_1, .f2_2, .f2_3, .f2_4, .f2_8, .f2_9, .f2_10, .f2_11, .f2_12{
+            margin-top: 1px;
+            grid-column: span1;
+            justify-content: end;
+            
+        }
+        .f2_5{
+            
+            font-weight: bold;
+            font-family: serif;
+            font-size: 12px;
+            grid-column: 5/ span 1;
+            width: 150px;
+        }
+        .f2_6{
+            
+            font-weight: bold;
+            font-family: serif;
+            font-size: 12px;
+            grid-column: 6/ span 1;
+        }
+        .f2_7{
+            
+            font-weight: bold;
+            font-family: serif;
+            font-size: 12px;
+            grid-column: 7/ span 1;
+        }
+       .f2_13{
+            
+            font-weight: bold;
+            font-family: serif;
+            font-size: 12px;
+            padding-top: 2px;
+            grid-column: 5/ span 3; 
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div>
+            <img src="./Amazonl.png" class="img1">
+        </div>
+        <div>
+            <p><small>Delivering to mumbai 400120</small></p>
+            <div style="display: flex; justify-content: left; ">
+                <img src="./location.png" class="img2">
+                <b style="color:white; margin-top:0px;"><small>Update location</small></b>
+            </div>
+        </div>
+        <div>
+            <div class="n1">
+                <select name="" id="select1"
+                    style="height: -webkit-fill-available; background-color: #ccc; width: 55px; padding-left: 3px; border-radius: 4px 0px 0px 4px;">
+                    <option value="">All </option>
+                    <option value="">Alexa Fashion</option>
+                    <option value="">Alexa Fashion</option>
+                    <option value="">Alexa Fashion</option>
+                    <option value="">Alexa Fashion</option>
+                    <option value="">Alexa Fashion</option>
+                    <option value="">Alexa Fashion</option>
+                    <option value="">Alexa Fashion</option>
+                    <option value="">Alexa Fashion</option>
+                </select>
+            </div>
+            <div class="n2"><input type="text" placeholder="Search Amazon.in"
+                    style="width: 440px; height: -webkit-fill-available; padding-left: 5px;"></div>
+            <div class="n3"><i class="fas fa-search " style="font-size: 26px; padding: 10px 10px; "></i></i></i></div>
+        </div>
+        <div>
+            <span><img src="./india-flag-icon.webp" style="height: 23px; width: 27px; margin-top: -2px;"></span>
+            <span><b>EN
+
+                </b></span>
+        </div>
+        <div>
+            <small>Hello,sign in</small>
+            <b style="color:white; margin-top:0px;"><small>Accounts & Lists</small></b>
+        </div>
+        <div><small>Return</small>
+            <br>
+            <b>& Orders</b>
+            </li>
+        </div>
+        <div><i class="fa fa-3x fa-shopping-cart" style="color: beige; margin:5px 3px 3px 10px;"></i></div>
+
+    </div>
+
+    <div class="cont2">
+
+        <p>All</p>
+        <p>Fresh</p>
+        <p>MX Player</p>
+        <p>Sell</p>
+        <p>Best Sellers</p>
+        <p>Today's Deal</p>
+        <p>Mobiles</p>
+        <p>Electronics</p>
+        <p>Home & Kitchen</p>
+        <p>Customer Service</p>
+        <p>Prime</p>
+        <p>Amazon Pay</p>
+        <p>New Releases</p>
+        <p>Fashion</p>
+        <p>Car & Motorbikes</p>
+
+    </div>
+
+    <div class="cont3">
+        <div class="cont3_1">
+            <div class="i1">
+                <p style="color: #0F1111; font-weight: bold; font-size: 19px;">Revamp your house in style</p>
+                <div class="galary1">
+                    <div class="g1i1">
+                        <img src="./Box1.1.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 19px 22px 2px 22px;">
+                        <p style="font-size: 12px; margin-left: -20px;">Cushion covers,</p>
+                        <p style="font-size: 12px; margin-left: -10px;">bedsheets & more</p>
+                    </div>
+                    <div class="g1i2">
+                        <img src="./Box1.2.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 19px 22px 2px 22px;">
+                        <p style="font-size: 12px; margin-left:-22px;">Figurine, vases</p>
+                        <p style="font-size: 12px; margin-left:-65px;">& more</p>
+
+                    </div>
+                    <div class="g1i3">
+                        <img src="./Box1.3.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 19px 22px 2px 22px;">
+                        <p style="font-size: 12px; margin-left: -20px;">Home storage</p>
+
+
+                    </div>
+                    <div class="g1i4">
+                        <img src="./Box1.4.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 19px 22px 2px 22px;">
+                        <p style="font-size: 12px; margin-left: -20px;">Lightning solutions</p>
+
+
+                    </div>
+
+                    <div class="explore" style="margin-top: 50px; ">
+                        <a style="text-decoration: none; font-size: small; color:rgb(92, 192, 226); font-weight: bold; margin-left:-30px;"
+                            href="https://www.amazon.in/b/?_encoding=UTF8&node=12414705031&pd_rd_w=Asov5&content-id=amzn1.sym.f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_p=f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_r=KA54QV39Y0H6HJCR5TVD&pd_rd_wg=a2HSa&pd_rd_r=1acb786b-b3eb-41ab-8a32-e921f1c99cf1&ref_=pd_hp_d_atf_unk&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522"
+                            target="_blank" rel="noopener noreferrer">Explore all</a>
+                    </div>
+                </div>
+            </div>
+            <div class="i2">
+                <p style="color: #0F1111; font-weight: bold; font-size: 19px; margin-left: -107px;">Starting @149 |</p>
+                <p style="color: #0F1111; font-weight: bold; font-size: 19px; margin-left: -130px;">Headphones</p>
+                <div class="galary2">
+                    <div class="g1i1">
+                        <img src="./Box2.1.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 10px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Starting @149 | </p>
+                        <p style="font-size: 11px; margin-left: -75px;">boat</p>
+                    </div>
+                    <div class="g1i2">
+                        <img src="./Box2.2.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 10px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Starting @349 | </p>
+                        <p style="font-size: 11px; margin-left: -75px;"> boult</p>
+
+
+                    </div>
+                    <div class="g1i3">
+                        <img src="./Box2.3.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 14px 22px 2px 22px;">
+
+                        <p style="font-size: 11px; margin-left: -25px;">Starting @649 | </p>
+                        <p style="font-size: 11px; margin-left: -70px;">noise</p>
+
+
+                    </div>
+                    <div class="g1i4">
+                        <img src="./Box2.4.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 14px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Starting @249 | </p>
+                        <p style="font-size: 11px; margin-left: -50px;">zebronics</p>
+
+
+                    </div>
+
+                    <div class="explore" style="margin-top: 40px; ">
+                        <a style="text-decoration: none; font-size: small; color:rgb(92, 192, 226); font-weight: bold; margin-left:-30px;"
+                            href="https://www.amazon.in/b/?_encoding=UTF8&node=12414705031&pd_rd_w=Asov5&content-id=amzn1.sym.f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_p=f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_r=KA54QV39Y0H6HJCR5TVD&pd_rd_wg=a2HSa&pd_rd_r=1acb786b-b3eb-41ab-8a32-e921f1c99cf1&ref_=pd_hp_d_atf_unk&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522"
+                            target="_blank" rel="noopener noreferrer">Explore all</a>
+                    </div>
+                </div>
+            </div>
+            <div class="i3">
+                <p style="color: #0F1111; font-weight: bold; font-size: 19px; margin-left: -5px;">Appliances for your
+                    home |</p>
+                <p style="color: #0F1111; font-weight: bold; font-size: 19px; margin-left: -130px;">Up to 55% off</p>
+                <div class="galary3">
+                    <div class="g1i1">
+                        <img src="./Box3.1.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 10px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Air conditioner</p>
+
+                    </div>
+                    <div class="g1i2">
+                        <img src="./Box3.2.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 10px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Refrigerator</p>
+
+                    </div>
+                    <div class="g1i3">
+                        <img src="./Box3.3.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 14px 22px 2px 22px;">
+
+                        <p style="font-size: 11px; margin-left: -25px;">Microwaves</p>
+
+                    </div>
+                    <div class="g1i4">
+                        <img src="./Box3.4.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 14px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Washing machines</p>
+
+
+
+                    </div>
+
+                    <div class="explore" style="margin-top: 40px; ">
+                        <a style="text-decoration: none; font-size: small; color:rgb(92, 192, 226); font-weight: bold; margin-left:-30px;"
+                            href="https://www.amazon.in/b/?_encoding=UTF8&node=12414705031&pd_rd_w=Asov5&content-id=amzn1.sym.f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_p=f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_r=KA54QV39Y0H6HJCR5TVD&pd_rd_wg=a2HSa&pd_rd_r=1acb786b-b3eb-41ab-8a32-e921f1c99cf1&ref_=pd_hp_d_atf_unk&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522"
+                            target="_blank" rel="noopener noreferrer">Explore all</a>
+                    </div>
+                </div>
+            </div>
+            <div class="i4">
+
+                <p style="color: #0F1111; font-weight: bold; font-size: 18px; margin-top: 10px; margin-left: 15px;">Sign
+                    in for your best </p>
+                <p style="color: #0F1111; font-weight: bold; font-size: 18px;  margin-left: 15px;">experience</p>
+                <button
+                    style="border-radius: 25px; background-color: gold; margin-left: 12px; margin-top: 10px; width:270px; padding:4px; border: none;">Sign
+                    in securely </button>
+                <div>
+                    <div class="i4_1">
+                        <img src="i4_1.jpg" alt=""
+                            style="height: 250px; width: 290px; outline-color: #007185; outline-offset: -1;">
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="i5">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="cont4">
+        <div class="cont4_1">
+            <div class="i1">
+                <p style="color: #0F1111; font-weight: bold; font-size: 19px; margin-left: -45px;">Starting @99 |Amazon
+                </p>
+                <p style="color: #0F1111; font-weight: bold; font-size: 19px; margin-left: -110px;">Brands & more</p>
+                <div class="galary2">
+                    <div class="g1i1">
+                        <img src="./Box2.1.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 10px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Starting @149 | </p>
+                        <p style="font-size: 11px; margin-left: -75px;">boat</p>
+                    </div>
+                    <div class="g1i2">
+                        <img src="./Box2.2.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 10px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Starting @349 | </p>
+                        <p style="font-size: 11px; margin-left: -75px;"> boult</p>
+
+
+                    </div>
+                    <div class="g1i3">
+                        <img src="./Box2.3.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 14px 22px 2px 22px;">
+
+                        <p style="font-size: 11px; margin-left: -25px;">Starting @649 | </p>
+                        <p style="font-size: 11px; margin-left: -70px;">noise</p>
+
+
+                    </div>
+                    <div class="g1i4">
+                        <img src="./Box2.4.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 14px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Starting @249 | </p>
+                        <p style="font-size: 11px; margin-left: -50px;">zebronics</p>
+
+
+                    </div>
+
+                    <div class="explore" style="margin-top: 40px; ">
+                        <a style="text-decoration: none; font-size: small; color:rgb(92, 192, 226); font-weight: bold; margin-left:-30px;"
+                            href="https://www.amazon.in/b/?_encoding=UTF8&node=12414705031&pd_rd_w=Asov5&content-id=amzn1.sym.f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_p=f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_r=KA54QV39Y0H6HJCR5TVD&pd_rd_wg=a2HSa&pd_rd_r=1acb786b-b3eb-41ab-8a32-e921f1c99cf1&ref_=pd_hp_d_atf_unk&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522"
+                            target="_blank" rel="noopener noreferrer">Explore all</a>
+                    </div>
+                </div>
+            </div>
+            <div class="i2">
+                <p style="color: #0F1111; font-weight: bold; font-size: 19px; margin-left: -107px;">Starting @149 |</p>
+                <p style="color: #0F1111; font-weight: bold; font-size: 19px; margin-left: -130px;">Headphones</p>
+                <div class="galary2">
+                    <div class="g1i1">
+                        <img src="./Box2.1.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 10px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Starting @149 | </p>
+                        <p style="font-size: 11px; margin-left: -75px;">boat</p>
+                    </div>
+                    <div class="g1i2">
+                        <img src="./Box2.2.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 10px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Starting @349 | </p>
+                        <p style="font-size: 11px; margin-left: -75px;"> boult</p>
+
+
+                    </div>
+                    <div class="g1i3">
+                        <img src="./Box2.3.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 14px 22px 2px 22px;">
+
+                        <p style="font-size: 11px; margin-left: -25px;">Starting @649 | </p>
+                        <p style="font-size: 11px; margin-left: -70px;">noise</p>
+
+
+                    </div>
+                    <div class="g1i4">
+                        <img src="./Box2.4.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 14px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Starting @249 | </p>
+                        <p style="font-size: 11px; margin-left: -50px;">zebronics</p>
+
+
+                    </div>
+
+                    <div class="explore" style="margin-top: 40px; ">
+                        <a style="text-decoration: none; font-size: small; color:rgb(92, 192, 226); font-weight: bold; margin-left:-30px;"
+                            href="https://www.amazon.in/b/?_encoding=UTF8&node=12414705031&pd_rd_w=Asov5&content-id=amzn1.sym.f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_p=f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_r=KA54QV39Y0H6HJCR5TVD&pd_rd_wg=a2HSa&pd_rd_r=1acb786b-b3eb-41ab-8a32-e921f1c99cf1&ref_=pd_hp_d_atf_unk&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522"
+                            target="_blank" rel="noopener noreferrer">Explore all</a>
+                    </div>
+                </div>
+            </div>
+            <div class="i3">
+                <p style="color: #0F1111; font-weight: bold; font-size: 19px; margin-left: -5px;">Appliances for your
+                    home |</p>
+                <p style="color: #0F1111; font-weight: bold; font-size: 19px; margin-left: -130px;">Up to 55% off</p>
+                <div class="galary3">
+                    <div class="g1i1">
+                        <img src="./Box3.1.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 10px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Air conditioner</p>
+
+                    </div>
+                    <div class="g1i2">
+                        <img src="./Box3.2.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 10px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Refrigerator</p>
+
+                    </div>
+                    <div class="g1i3">
+                        <img src="./Box3.3.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 14px 22px 2px 22px;">
+
+                        <p style="font-size: 11px; margin-left: -25px;">Microwaves</p>
+
+                    </div>
+                    <div class="g1i4">
+                        <img src="./Box3.4.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 14px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Washing machines</p>
+
+
+
+                    </div>
+
+                    <div class="explore" style="margin-top: 40px; ">
+                        <a style="text-decoration: none; font-size: small; color:rgb(92, 192, 226); font-weight: bold; margin-left:-30px;"
+                            href="https://www.amazon.in/b/?_encoding=UTF8&node=12414705031&pd_rd_w=Asov5&content-id=amzn1.sym.f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_p=f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_r=KA54QV39Y0H6HJCR5TVD&pd_rd_wg=a2HSa&pd_rd_r=1acb786b-b3eb-41ab-8a32-e921f1c99cf1&ref_=pd_hp_d_atf_unk&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522"
+                            target="_blank" rel="noopener noreferrer">Explore all</a>
+                    </div>
+                </div>
+            </div>
+            <div class="i4_nextrow">
+                <p style="color: #0F1111; font-weight: bold; font-size: 19px; margin-left: -5px;">Appliances for your
+                    home |</p>
+                <p style="color: #0F1111; font-weight: bold; font-size: 19px; margin-left: -130px;">Up to 55% off</p>
+                <div class="galary3">
+                    <div class="g1i1">
+                        <img src="./Box3.1.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 10px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Air conditioner</p>
+
+                    </div>
+                    <div class="g1i2">
+                        <img src="./Box3.2.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 10px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Refrigerator</p>
+
+                    </div>
+                    <div class="g1i3">
+                        <img src="./Box3.3.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 14px 22px 2px 22px;">
+
+                        <p style="font-size: 11px; margin-left: -25px;">Microwaves</p>
+
+                    </div>
+                    <div class="g1i2_4">
+                        <img src="./Box3.4.jpg" alt="Img1" style="height: 93px;
+                    width: 102px;
+                    margin: 14px 22px 2px 22px;">
+                        <p style="font-size: 11px; margin-left: -25px;">Washing machines</p>
+
+
+
+                    </div>
+
+                    <div class="explore" style="margin-top: 40px; ">
+                        <a style="text-decoration: none; font-size: small; color:rgb(92, 192, 226); font-weight: bold; margin-left:-30px;"
+                            href="https://www.amazon.in/b/?_encoding=UTF8&node=12414705031&pd_rd_w=Asov5&content-id=amzn1.sym.f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_p=f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_r=KA54QV39Y0H6HJCR5TVD&pd_rd_wg=a2HSa&pd_rd_r=1acb786b-b3eb-41ab-8a32-e921f1c99cf1&ref_=pd_hp_d_atf_unk&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522"
+                            target="_blank" rel="noopener noreferrer">Explore all</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="i5">
+
+            </div>
+            <div class="i6"></div>
+            <div class="i7"></div>
+            <div class="i8"></div>
+        </div>
+
+    </div>
+
+    <div class="cont5">
+        <div class="heading">
+            <p style="color: #0F1111; font-weight: bold; font-size: 19px;">Up to 60% off| Unique products from store
+                nearby </p>
+
+            <a style="text-decoration: none; font-size: small; color:rgb(92, 192, 226); font-weight: bold; margin-left:20px; margin-top: 5px;"
+                href="https://www.amazon.in/b/?_encoding=UTF8&node=12414705031&pd_rd_w=Asov5&content-id=amzn1.sym.f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_p=f8e82c51-0408-4554-a158-9be4d776850d&pf_rd_r=KA54QV39Y0H6HJCR5TVD&pd_rd_wg=a2HSa&pd_rd_r=1acb786b-b3eb-41ab-8a32-e921f1c99cf1&ref_=pd_hp_d_atf_unk&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522"
+                target="_blank" rel="noopener noreferrer">See all offers</a>
+
+        </div>
+
+        <div class="horizont_galary">
+            <div class="g1">
+                <img src="./g1.jpg" alt="" style="height: 200px; width: 200px;">
+            </div>
+            <div class="g2">
+                <img src="./g2.jpg" alt="" style="height: 200px; width: 200px;">
+            </div>
+            <div class="g3">
+                <img src="./g3.jpg" alt="" style="height: 200px; width: 200px;">
+            </div>
+            <div class="g4">
+                <img src="./g4.jpg" alt="" style="height: 200px; width: 200px;">
+            </div>
+            <div class="g5">
+                <img src="./g5.jpg" alt="" style="height: 200px; width: 200px;">
+            </div>
+            <div class="g6">
+                <img src="./g6.jpg" alt="" style="height: 200px; width: 200px;">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <!-- <div class="f1"></div>
+        <div class="f2"></div>
+        <div class="f3"></div>
+        <hr> -->
+        <div class="foot_1">
+            <div class="f1">
+                <p style="color: #ddd;">Abe Books</p>
+                <p style="color: #999;">Books, art</p>
+                <p style="color: #999;">& collectibles</p>
+
+            </div>
+            <div class="f2">
+                <p style="color: #ddd;">Amazon Web Services</p>
+                <p style="color: #999;">Scalable Cloud</p>
+                <p style="color: #999;">Computing Services</p>
+            </div>
+            <div class="f3">
+                <p style="color: #ddd;">Audible</p>
+                <p style="color: #999;">Download</p>
+                <p style="color: #999;">Audio</p>
+            </div>
+            <div class="f4">
+                <p style="color: #ddd;">Prime</p>
+                <p style="color: #999;">2-Hour delivery</p>
+                <p style="color: #999;">every day</p>
+            </div>
+            <div class="f5">
+                <p style="color: #ddd;">Abe Books</p>
+                <p style="color: #999;">Books, art</p>
+                <p style="color: #999;">& collectibles</p>
+
+            </div>
+            <div class="f6">
+                <p style="color: #ddd;">Amazon Web Services</p>
+                <p style="color: #999;">Scalable Cloud</p>
+                <p style="color: #999;">Computing Services</p>
+            </div>
+            <div class="f7">
+                <p style="color: #ddd;">Audible</p>
+                <p style="color: #999;">Download</p>
+                <p style="color: #999;">Audio</p>
+
+            </div>
+            <div class="f8">
+                <p style="color: #ddd;">Prime</p>
+                <p style="color: #999;">2-Hour delivery</p>
+                <p style="color: #999;">every day</p>
+            </div>
+        </div>
+        <div class="foot_2">
+            <div class="f2_1"></div>
+            <div class="f2_2"></div>
+            <div class="f2_3"></div>
+            <div class="f2_4"></div>
+            <div class="f2_5"><p style="color: #ddd;">Conditions of Use & Sale</p></div>
+            <div class="f2_6"><p style="color: #ddd;">Privacy Notice</p></div>
+            <div class="f2_7"><p style="color: #ddd;">Interest-Based Ads</p></div>
+            <div class="f2_8"></div>
+            <div class="f2_9"></div>
+            <div class="f2_10"></div>
+            <div class="f2_11"></div>
+            <div class="f2_12"></div>
+            <div class="f2_13"><p style="color: #ddd;">@ 1996-2024. Amazon.com, Inc. or its affiliates</p></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/d227cbd8ec.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+<!-- background-color: #232f3e; -->
+<!-- #0F1111 -->

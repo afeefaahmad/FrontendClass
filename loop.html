@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop</title>
+  </head>
+
+  <body>
+    <!-- <script>
+        var arr = ["abc", "pqr", "mno", "xyz", "def"];
+        var arr = {
+            name: 'ABC',
+            inst: 'Besant',
+            place: 'Tambaram',
+            course: 'Frontend'
+        };
+        // for (let i = 0; i < arr.length; i++) {
+        //     console.log(arr[i]);
+        // }
+
+        // for (let i in arr) {
+        //     console.log(arr[i]);
+        // }
+        // for (let i of arr) {
+        //     console.log(i);
+        // }
+    </script> -->
+
+    <!-- <script>
+        var arr = ["abc", "pqr", "mno", "xyz", "def"];
+        let i = 0;
+        // while (i < arr.length) {
+        //     console.log(arr[i]);
+        //     i = i + 1;
+        // }
+
+        do {
+            console.log(i);
+            i = i + 1;
+        } while (i == 10)
+    </script> -->
+
+    <script>
+      //loops:  1.for
+      //        2.for-in can be used for both array as well as objects
+      //        3.for-of :for iterables like array only
+      var arr = ["abc", "def", "pqr"];
+      var obj = {
+        name: "abc",
+        age: 10,
+        isPAss: true,
+      };
+
+      for (let i = 0; i < arr.length; i++) {
+        // console.log(arr[i]);
+      }
+      for (let i in obj) {
+        // console.log(i);
+        // console.log(obj[i]);
+      }
+      for (let i of arr) {
+        // console.log(i);
+      }
+
+      let i = 0;
+      // while(i<arr.length){
+      //     console.log(arr[i]);
+      //     i++;
+      // }
+
+      do {
+        console.log(i * 2);
+        i = i + 1;
+      } while (i < 10);
+    </script>
+  </body>
+</html>

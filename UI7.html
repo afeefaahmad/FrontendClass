@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box and ball </title>
+    <style>
+        .cont {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            position: relative;
+            animation: moving 4s ease-in-out  ;
+        }
+        @keyframes  moving{
+            0%{
+                transform:rotate(0deg);                
+            }
+            50%{
+                transform: rotate(90deg)
+            }
+            75%{
+                transform:rotate(180deg)
+            }
+            100%{
+                transform:rotate(180deg);
+            } 
+            
+            
+        }
+
+        .ani {
+
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 350px;
+            left: 175px;
+            background-color: red;
+            animation: ball 4s ease-in-out  ;
+        }
+        @keyframes ball {
+            0%{
+                top:350px;
+                left:175px;
+                
+            }
+            50%{
+                top:350px;
+                left:175px;
+                
+            }
+            75%{
+                top:350px;
+                left:175px;
+            }
+            
+            100%{
+                /* top:0px;
+                left:175px; */
+                top:0px;
+                left:175px;
+            }
+            
+
+            
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="ani"></div>
+    </div>
+</body>
+
+</html>

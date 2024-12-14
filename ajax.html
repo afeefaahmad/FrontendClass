@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch HTML Example</title>
+</head>
+<body>
+    <h1>AJAX HTML Fetch Example</h1>
+    <button id="loadContent">Load Content</button>
+    <div id="content" style="margin-top: 20px; border: 1px solid #ccc; padding: 10px;">
+        
+    </div>
+
+    <script>
+        // var a = document.getElementById('loadContent');
+        // a.onclick = function(){
+
+        // }
+        document.getElementById('loadContent').addEventListener('click', function () {
+            const xhr = new XMLHttpRequest();
+
+            xhr.open('GET', './ajaxresp.html', true); //Request
+
+            xhr.onload = function () { //Response
+                if (xhr.status === 200) {
+                    console.log(xhr);
+                    
+                    document.getElementById('content').innerHTML = xhr.responseText;
+                } else {
+                    console.error('Error loading content:', xhr.statusText);
+                }
+            };
+            xhr.send();
+        });
+    </script>
+</body>
+</html>

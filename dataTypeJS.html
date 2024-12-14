@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataTypes</title>
+</head>
+<body>
+    <h1>DataTypes</h1>
+    <script>
+        // var, let and const
+        var a = "Hello";
+        {
+            var a = "World";
+        }
+        console.log(a);
+
+        let b = "Hello";
+        {
+            let b = "World";
+            console.log(b);
+        }
+        console.log(b);
+
+        const c = 3.14
+        {
+            console.log(c);
+        }
+        console.log(c);
+
+        // DataTypes
+        let d = "abc";
+        console.log(typeof(d));
+
+        let e = [1,2,3,"four",true];
+        console.log(e);
+        console.log(typeof(e));
+        console.log(typeof(e[0]));
+        console.log(typeof(e[4]));
+
+        let f = {1:"one", 2:"two", 3:true}
+        console.log(f);
+        console.log(typeof(f));
+        console.log(typeof(f[1])); 
+        console.log(typeof(f[3])); 
+
+        // Concatenation
+        var num1 = 5;
+        var num2 = "Hello";
+        var num3 = num2+num1;
+        var num4 = num2+num1+num3;
+        console.log(num4);
+
+        let g = 5+2;
+        console.log(g);
+
+        let arr = [10, 20, 30];
+        var sum =0;
+        for(var i=0; i<ar.length; i++){
+            sum+=arr[i];
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>

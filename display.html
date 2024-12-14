@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        .dflex div{
+            background-color: aqua;
+            width: 50px;
+            height: 50px;
+            padding: 20px;
+            margin: 20px;
+        }
+        .dflex{
+            display: flex;
+            /* grid-template-columns: auto auto; */
+
+        }
+        .item1{
+            grid-area: i1;
+        }
+        .item2{
+            grid-area: i2;
+        }
+        .item3{
+            grid-area: i3;
+        }
+        .item4{
+            grid-area: i4;
+        }
+        .item5{
+            grid-area: i5;
+        }
+        .item6{
+            grid-area: i6;
+        }
+
+        .bgimg{
+            background-image: url('./besant.jpg');
+            width: auto;
+            height: 123px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bgimg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit non impedit repellendus, itaque beatae, molestias autem nesciunt amet odit fugit, fugiat sit nemo dicta. Nulla deleniti maxime sequi molestias deserunt!</div>
+    <!-- <div class="dgrid">
+        <div class="item1">Item1</div>
+        <div class="item2">Item2</div>
+        <div class="item3">Item3</div>
+        <div class="item4">Item4</div>
+        <div class="item5">Item5</div>
+        <div class="item6">Item6</div>
+    </div> -->
+    <div class="dflex">
+        <div class="item1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati officia expedita praesentium quidem architecto dolorem id aut, reprehenderit quisquam neque ducimus necessitatibus asperiores amet minima dolores temporibus modi. Nobis, aut!</div>
+        <div class="item2">Item2</div>
+        <div class="item3">Item3</div>
+        <div class="item4">Item4</div>
+        <div class="item5">Item5</div>
+        <div class="item6">Item6</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <!-- FORM method1:Using onSubmit  method2:using onclick on button -->
+</head>
+
+<body>
+    <!-- Method1 -->
+    <form name="myform" onsubmit="formSub(event)">
+        <label for="">Name</label>
+        <input type="text" name="name"><br>
+        <label for="">Mobilenumber</label>
+        <input type="text" name="mobnum"><br>
+   
+        <button type="submit">submit</button><br>
+    </form>
+
+
+    <!-- Method2 : using onclick on button -->
+    <!-- <form id="myform">
+        <label for="">Name</label>
+        <input type="text" name="name"><br>
+        <label for="">Mobilenumber</label>
+        <input type="text" name="mobnum"><br>
+
+        <button type="button" onclick="formSub(event)">submit</button>
+    </form> -->
+
+    <script>
+        //Method1
+        function formSub(e) {
+            e.preventDefault();
+            var a = document.forms['myform']['name'].value;
+            var b = document.forms['myform']['mobnum'].value;
+
+            console.log(a);
+            console.log(b);
+        }
+
+        //Method2
+        // function formSub(e) {
+        //     e.preventDefault();
+        //     const form = document.querySelector('#myform');
+        //     const formdata = new FormData(form);
+        //     for (const i of formdata.entries()) {
+        //         // console.log(i[1]);
+        //         console.log(i);
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

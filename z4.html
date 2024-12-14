@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Js practice</title>
+</head>
+
+<body>
+  <!-- <div class="d">div1</div>
+  <h1>welcome to DOM</h1> -->
+  <!-- <div class="d">div2</div>
+  <div class="d">div3</div> -->
+  <button id="btn1">Toggle Button</button>
+  <script>
+    //Q> Toggle button dark and light mode
+    let ToggleBtn = document.querySelector('#btn1');
+    let bdy = document.querySelector('body');
+    var count=1;
+    ToggleBtn.addEventListener('click', ()=>{
+      count++;
+      if(count %2 == 0){
+
+        bdy.style.backgroundColor = "black";
+      }
+      else{
+
+        bdy.style.backgroundColor = "white";
+      }
+    });
+    
+    //Q1>Create new button "click me",bg=red,color=white & first element of body
+    // let newButton = document.createElement('button');
+    // newButton.innerText="Click me";
+    // newButton.style.backgroundColor="red";
+    // newButton.style.color = "white";
+    // document.querySelector("body").prepend(newButton);
+    
+    // let x = document.querySelectorAll('.div');
+    // x.innerHtml = "hello";
+
+    // const pen = {
+    //      name : "parker",
+    //      rating: "4 star",
+    //      isDeal: true,
+    //      price : 270,
+    // };
+    // console.log(typeof(pen));
+    // console.log(pen);
+    // console.log(pen["name"]); //access method1
+    // console.log(pen.name);     //access method2
+
+    // let marks = [89,45,56,23,57,89];
+    // let sum = 0;
+
+    // for(let val of marks){
+    //     sum += val;
+
+    // }
+    // console.log(`avg maks are: ${sum/marks.length} `);
+
+    // let price = [89,45,56,23,57,89,100];
+
+    // for(let i=0; i<price.length; i++){
+    //     price[i] = price[i] - price[i]*0.1;
+
+    // }
+    // console.log(price);
+
+    // for(let val of price){
+
+    //       console.log(val);
+    // }
+
+    //function: block of code that performs specific task, can be invoked whenever needed
+    //Q1. Create function that takes string as argument and return number of vowels
+    //Q2. Create arrow function for that
+
+    // Ans1.
+    // function findVowels(sentence){
+    //     vowel = " ";
+    //     for(let char of sentence.toLowerCase()){
+    //         if(char=='a'||char=='e'||char=='i'||char=='o'||char=='u'){
+    //             vowel += char;
+    //         }
+    //     }
+    //     return vowel;
+    // }
+    // console.log(findVowels("a quick brown fox jumps over"));
+
+    //Ans2.
+    // let findVowels = (sentence) => {
+    //     let vowels = " ";
+    //     for(let char of sentence.toLowerCase()){
+    //         if(char=='a'||char=='e'||char=='i'||char=='o'||char=='u'){
+    //             vowels += char;
+    //         }
+    //     }
+
+    //     return vowels;
+    // }
+    // console.log(findVowels("a quick brown fox jumps over"));
+
+    //Arrow func  : syntax  (parameters) => { } thdn assign to variable
+    // let arrowSum = (a,b) => {
+    //     return a+b;
+    // }
+    // console.log(arrowSum(2,3));
+
+    //Fibonacci series : 0,1,1,2,3,5....
+    // function fibonacci(n) {
+    //   let temp = 0;
+    //   let num1 = 0;
+    //   let num2 = 1;
+    //   if (n === 0) return num1;
+    //   if (n === 1) return num2;
+
+    //   for (let i = 2; i <= n; i++) {
+    //     temp = num1 + num2;
+    //     num1 = num2;
+    //     num2 = temp;
+    //   }
+    //   return num2;
+    // }
+    // console.log(fibonacci(5));
+
+    // //Fibonacci using recursion
+    // function recurFibo(n) {
+    //   if (n == 0) return 0;
+    //   if (n == 1) return 1;
+
+    //   return recurFibo(n - 1) + recurFibo(n - 2);
+    // }
+    // console.log(recurFibo(5));
+
+    //Q> Square of each value of an array   
+    // arr = [1,2,3,4,5]
+    // arr.forEach(val => {
+    //   console.log(val*val);
+    // });  //or
+    // arr.forEach(function sqVal(val){
+    //   console.log(val*val);
+    // })
+
+    arr = [21, 32, 43, 54]
+    //print all values of an array
+    // arr.forEach(val => {
+    //   console.log(val);
+    // })
+    //Using map to print all values of an array
+    // arr.map(val =>{
+    //   console.log(val);
+    // })
+    //using map to create a new array based on values retuned from map
+    // let newArr = arr.map(val => {
+    //   return val;
+    // })
+    // console.log(newArr);
+
+    //Q>Given an array of marks of students ,Find out marks of students greater than 90
+    // arr = [78,91,79,90,98,94,96]
+    // arr.filter(val => {
+    //   if (val>90){
+    //     console.log(val);
+    //   }
+    // });=
+    //Q>Take a number and create an array of numbers from 1 to n
+    // const n = 6;
+    // arr = []
+    // for(let i=1; i<=n; i++){
+    //   arr[i-1]=i;
+    // }
+    // console.log(arr);
+    //Q> Uses Reduce method to provide sum of all elemnts of array
+    // num = [1,2,3,4,5]
+    // let sum = num.reduce((res,curr) => {
+    //   return res + curr;
+    // });
+    // console.log(sum);
+
+    //Q> Uses Reduce method to provide mul of all elemnts of array or factorial
+    // let fact = num.reduce((res,curr) => {
+    //   return res * curr;
+    // });
+    // console.log(fact);
+
+  </script>
+</body>
+
+</html>

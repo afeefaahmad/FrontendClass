@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            name: 'Besant',
+            course: 'Frontend',
+            place: 'Tamabaram'
+        }
+        console.log(obj['course']);
+
+        var obj = {
+            name: 'Besant',
+            course: 'Frontend',
+            place: 'Tamabaram',
+            fulltext: function (para) {
+                return 'I\'m studying in ' + this.name + ' in ' + this.course + ' course at ' + this.place + ' in ' + para;
+            }
+        }
+        console.log(obj.fulltext('chennai'));
+
+        // var obj = {
+        //     name: 'abc',
+        //     age: 5,
+        //     class: "lkg",
+
+        //     entireInfo: function(para1, para2 ){
+        //         return "info: "+ this.name +' '+ this.age+ ' '+this.class+' '+para1+' '+para2;
+        //     }
+        // }
+        // console.log(obj.entireInfo('a','b'));
+        // console.log(obj.name);
+        // console.log(obj['name']);
+
+        // var name = ["abc" ,"pqr ","xyz"]
+
+        ////Find first and last name
+        // var name = "abc pqr xyz"
+        // var arr = name.split(" ")
+        // console.log(arr[0] +" " +arr[arr.length-1]);
+
+
+        
+        // const arr = [12, 19, 10, 7, 14, 11, 16, 15, 17, 9, 10, 2, 11, 6, 5, 3, 14, 17, 18]
+        // const arr1 = [];
+        // arr.forEach(element => {
+        //     if (!arr1.includes(element)) {
+        //         arr1.push(element);
+        //     }
+        // });
+
+        // const evenNumbers = arr1.filter(function (num) {
+        //     return num > 10 && num % 2 === 0;
+        // });
+
+        // const oddNumbers = arr1.filter(function (num) {
+        //     return num > 10 && num % 2 !== 0;
+        // });
+
+        // console.log("Even Numbers", evenNumbers);
+        // console.log("Odd Numbers", oddNumbers);
+
+
+    </script>
+</body>
+
+</html>

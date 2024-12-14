@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style>
+    div{
+        font-family: 'Times New Roman', Times, serif;
+        height:200px;
+        width: 200px;
+        margin: 100px;
+    }
+    
+    #cover {
+        position: relative;
+        z-index: 2;
+        background-color: lightblue;
+        padding: 20px;
+        transition: transform 0.3s ease; 
+    }
+    
+    #hidden {
+        position: absolute; /* Position it absolutely within the container */
+        top: 0; /* Align to the top of the container */
+        left: 0; /* Align to the left of the container */
+        background-color: rgb(245, 222, 226);
+        padding: 20px;
+        opacity: 0; 
+        transition: opacity 0.3s ease; 
+    }
+    
+    #cover:hover {
+        transform: translate(100px,100px); 
+    }
+    
+    #cover:hover + #hidden {
+        opacity: 1; 
+    }
+    </style>
+</head>
+<body>
+    <div id="cover">Hover over me!</div>
+    <div id="hidden">Hello!</div>
+</body>
+</html>

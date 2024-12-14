@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watermark</title>
+    <style>
+
+        .cont::before {
+            content: 'Besant Technologies';
+            position: relative;
+            opacity: 0.2;
+            margin: 20px;
+            background-color: rgb(166, 161, 161);
+            width: 750px;
+            height: 300px;
+            font-size: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cont1 {
+            padding-left: 40px;
+            padding-right: 40px;
+            position: absolute;
+            /* top: 111px;
+            left: 80px; */
+            top:0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 700px;
+            height: 300px;
+        }
+
+    </style>
+</head>
+<body>
+     <div class="cont" style="position: relative;width: 200px;height: 200px;margin: 20px;">
+        <!-- <div class="cont">Besant Technologies</div> -->
+        <div class="cont1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsum facilis non architecto natus doloremque a consequatur illum vel. Adipisci laboriosam tenetur nesciunt eligendi, veniam, vel fuga alias ducimus minus perferendis laborum. Facilis iusto facere corrupti. Eius ullam hic harum incidunt expedita culpa magni quidem quibusdam vel? Distinctio error quos doloribus? Minima pariatur debitis cum, blanditiis praesentium ipsa eaque incidunt quis ab ducimus. Dolorum assumenda eaque illum atque laudantium obcaecati dolor vitae minus expedita explicabo! Nemo, omnis alias similique nobis quas odio? Ratione, quas quibusdam quod inventore quaerat itaque corporis, dolores, sequi nobis magnam beatae aliquam! Nostrum numquam sequi autem.</div>
+    </div>
+</body>
+</html>

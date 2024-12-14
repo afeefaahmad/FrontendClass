@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Sets
+        // var arr = ['a','b','c','b','d','c'];
+        // var setobj = new Set(arr);
+        // console.log(setobj.size);
+        // console.log(setobj);
+        // console.log(setobj.has('b'));
+        // setobj.add('e');
+        // console.log(setobj);
+        // setobj.add('a');
+        // console.log(setobj[0]);
+        // for (const i of setobj.values()) {
+        //     console.log(i);
+        // }
+        // for (const i of setobj.keys()) {
+        //     console.log(i);
+        // }
+        // for (const i of setobj.entries()) {
+        //     console.log(i);
+        // }
+
+        //Maps
+        var arr = [
+            ['name','abc'],
+            ['course','frontend'],
+            ['institute','besant']
+        ];
+        var mapobj = new Map(arr);
+        console.log(mapobj.size);
+        console.log(mapobj);
+        console.log(mapobj.has('course'));
+        console.log(mapobj.get('institute'));
+        mapobj.set('branch','Tambaram');
+        console.log(mapobj);
+        mapobj.delete('name');
+        // mapobj.clear();
+        console.log(mapobj);
+        for (const i of mapobj.values()) {
+            console.log(i);
+        }
+        for (const i of mapobj.keys()) {
+            console.log(i);
+        }   
+        for (const i of mapobj.entries()) {
+            console.log(i[1]);  
+        }
+    </script>
+</body>
+</html>

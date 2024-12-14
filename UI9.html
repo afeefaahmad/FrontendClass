@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Sign In</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            height: 60px;
+            padding-top: 10px;
+        }
+
+        .main {
+            display: block;
+            text-align: left;
+            margin: auto;
+            margin: 10px 500px 10px 500px;
+            height: 358px;
+            padding: 20px;
+            /* width: 348px; */
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        .div3{
+            display: block;
+         
+            margin: 10px 500px 0px 500px;
+            /* padding: 10px; */
+            /* width: 348px; */
+      
+        
+        }
+        .div4{
+            display: flex;
+                    justify-content: center;
+                    margin: 40px 40px 5px 40px;
+                   background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0), #fff);
+        }
+        .box{
+            
+
+        }
+        h1 {
+            font-size: 25px;
+            font-weight: 300;
+        }
+
+
+        .btn {
+            background-color: #ffd814;
+            /* border-color: #ffd814; */
+            /* border-color: #fcd200; */
+            /* border: 1px solid #a6a6a6; */
+            width: 100%;
+            padding: 9px 7px;
+            border: 0px;
+            border-radius: 8px;
+
+        }
+        .btn1 {
+            background-color: white;
+            width: 100%;
+            padding: 9px 7px;
+            border: 0px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+
+        }
+        .btn1:hover {
+            background-color: #dcdbdb;
+        }
+
+        .btn:hover {
+            background-color: #d7b50e;
+        }
+
+        .txt {
+            width: 95%;
+            /* border-top-color: #949494; */
+            border-radius: 4px;
+            border: .5px solid #949393;
+            height: 28px;
+            padding: 3px 7px;
+
+        }
+
+        .txt:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+            border: 1px solid rgba(81, 203, 238, 1);
+
+        }
+
+        .a-divider-break,
+        .a-divider.a-divider-break {
+            text-align: center;
+            position: relative;
+            top: 2px;
+            padding-top: 1px;
+            margin-bottom: 14px;
+            margin: 10px 500px;
+        }
+
+        
+        
+        .a-divider.a-divider-break:after {
+            content: "";
+            width: 360px;
+            
+            background-color: transparent;
+            display: block;
+            height: 1px;
+            border-top: 1px solid #e7e7e7;
+            position: absolute;
+            top: 50%;
+            margin-top: -1px;
+            z-index: -1;
+            text-align: center;
+        }
+        .divider br{
+            width: 100%;  
+            background-color: transparent;
+            display: block;
+            height: 500px;
+            border-top: 1px solid #e7e7e7;
+            position: absolute;
+            top: 50%;
+            padding-top: 80px;
+            z-index: -1;
+            text-align: center;
+           
+        }
+        /* .dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+} */
+
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="logo"><img src="./ama1.png" alt=""></div>
+   
+    <div class="main">
+       
+        <div class="signIn">
+            <h1>Sign in</h1>
+            <br>
+            <label for="" style="font-size: small;  font-weight: bolder; line-height: 1.5rem;">Email or mobile phone
+                number</label>
+
+            <input type="text" class="txt"> </input>
+            <br><br>
+            <button class="btn">Continue</button>
+            <p><br></p>
+            <p style="font-size: 12px;">By continuing, you agree to Amazon's <a href=""
+                    style="color: #0066C0">Conditions of Use</a> and <a href="" style="color: #0066C0">Privacy</a>
+                Notice.</p>
+
+                <!-- <div class="dropdown">
+                    <button class="dropbtn">
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+                  </div> -->
+
+                 
+            <br><br>
+            <br>
+            <p style="font-size: small;  font-weight: bolder; line-height: 1.5rem;">
+                Buying for work?</p>
+            <a href="https://www.amazon.in/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fbusiness%2Fregister%2Fcheck%2Fstatus%3Fref_%3Dab_welcome_bw_ckab_dsk%26originalRef%3Dab_reg_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_ab_reg_web_in&openid.mode=checkid_setup&marketPlaceId=A21TJRUUN4KGV&language=en_IN&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=ab_welcome_login_in&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.pape.preferred_auth_policies=Singlefactor&switch_account=signin&disableLoginPrepopulate=1&ref_=ab_welcome_bw_ap-sn_dsk"
+                style="color: #0066C0; font-size: small; text-decoration: none;">Shop on Amazon Business</a>
+
+                
+           
+        </div>
+    </div>
+        <div class="a-divider a-divider-break">
+            <h5  style="color:grey ;">New to Amazon?</h5>
+            
+        </div>
+        <div class="div3">
+            <button class="btn1">Create your Amazon account</button>
+        </div>
+        <div class="divider">
+            <hr>
+          
+        <div class="div4">
+            <br>
+            <a href=""style="color: #0066C0; font-size: x-small; text-decoration: none; margin-right:10px;">Conditions of use</a>
+            <a href=""style="color: #0066C0; font-size: x-small; text-decoration: none;margin-right:10px;">Privacy Notice</a>
+            <a href=""style="color: #0066C0; font-size: x-small; text-decoration: none; ">Help</a>
+           
+        </div>
+        <p style="display: flex; justify-content: center; font-size: x-small; padding-bottom: 80px;">© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+    </div>
+    <script src="https://kit.fontawesome.com/d227cbd8ec.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-size: cover;
+            background-image: url('./besant.jpg');
+            background-repeat: no-repeat;
+        }
+        .dflex{
+            display: flex;
+            
+        }
+
+        .dflex div{
+            padding: 20px;
+            margin: 20px;
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+        }
+        
+        @media (max-width:425px) {
+            .dflex{
+                display: block;
+            }
+
+            .dflex div{
+                background-color: blue;
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .dflex div::after{
+            content: '🎈';
+        }
+
+        .box:nth-of-type(even){
+            background-color: green;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="dflex">
+        <div class="box">Items</div>
+        <div class="box">Items</div>
+        <div class="box">Items</div>
+        <div class="box">Items</div>
+        <div class="box">Items</div>
+    </div>
+    <div class="dflex">
+        <div class="box">Items</div>
+        <div class="box">Items</div>
+        <div class="box">Items</div>
+        <div class="box">Items</div>
+        <div class="box">Items</div>
+    </div>
+    <!-- <img src="./besant.jpg" alt=""> -->
+</body>
+</html>

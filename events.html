@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="text" oninput="hdlefunc(this.value)"> -->
+    <!-- <select onchange="hdlefunc(this.value)">
+        <option value=""></option>
+        <option value="opt123">opt1</option>
+        <option value="opt276">opt2</option>
+        <option value="opt343">opt3</option>
+        <option value="opt446">opt4</option>
+     </select> -->
+    <input type="checkbox" class="checkbox" name="rad" onchange="hdlefunc(this.value)" value="chk1">
+    <input type="checkbox" class="checkbox" name="rad" onchange="hdlefunc(this.value)" value="chk2">
+    <input type="checkbox" class="checkbox" name="rad" onchange="hdlefunc(this.value)" value="chk3">
+    <input type="checkbox" class="checkbox" name="rad" onchange="hdlefunc(this.value)" value="chk4">
+    <input type="checkbox" class="checkbox" name="rad" onchange="hdlefunc(this.value)" value="chk5">
+    <div id="show">None</div>
+    
+    <!-- <script>
+        arr = []
+        function hdlefunc(v) {
+            let checkboxes = document.querySelectorAll('.checkbox');
+            let dis = document.getElementById('show')
+            arr.push(v);
+
+            //console.log(arr);
+            // arr.include()
+            // arr.filter((item, index)=>{
+            //     //return (i!=v);
+            //     arr.indexOf(item) === index;
+            //     console.log(item);
+            // });
+            const unique = arr.filter(function (v, i, a) {
+                return arr.indexOf(v) === i;
+            })
+        
+            //include
+            //filter
+            //join
+            if(v in arr){
+                unique.splice()
+            }
+            else{
+                
+                dis.innerHTML = unique.join(",");
+            }
+            console.log(unique);
+            //4 to5 dupli remove using filter , reduce
+            //include prog 4to5 
+
+        }
+    </script> -->
+
+    <!-- <script>
+ 
+        let checkboxes = document.querySelectorAll('.checkbox');
+        let names = document.querySelector('#show');
+        let arr= []; // Array to store selected names
+    
+        checkboxes.forEach(checkbox => {
+        function hdlefunc(v){
+            if (this.checked) {
+              arr.push(v);
+            } 
+            else {
+              const index = arr.indexOf(v);
+              if (index > -1) {
+                names.splice(index, 1);
+              }
+            }
+            names.textContent = arr.length > 0 ? arr.join(', ') : 'None';
+          };
+        });
+        console.log(arr);
+        
+      </script> -->
+      <script>
+        let arr = []; 
+        let div = document.getElementById('show');
+    
+        function hdlefunc(v) {
+          
+            if (arr.includes(v)) {
+                // let i = arr.indexOf(v);
+                // arr.splice(i, 1);
+                arr = arr.filter(function(val){
+                  return v != val;
+                })
+            }
+            else{
+                arr.push(v);
+            }            
+
+            console.log(arr);
+    
+          div.innerText = arr.join(', ');
+        }
+      </script>
+
+
+
+
+</body>
+
+</html>

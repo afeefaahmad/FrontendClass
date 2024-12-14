@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        form {
+            margin: 10px;
+
+        }
+
+        input,
+        select,
+        button {
+            margin: 2px;
+        }
+
+        table {
+            margin-top: 50px;
+            border-spacing: 0px;
+            margin-left: 10px;
+        }
+
+        td,
+        th {
+            padding: 5px;
+            margin-top: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="myform" onsubmit="formSub(event)">
+        <label for="">Name</label>
+        <input type="text" name="name"><br>
+        <label for="">Mobilenumber</label>
+        <input type="text" name="mobnum"><br>
+        <label for="">Email</label>
+        <input type="email" name="mail" id=""><br>
+        <label for="">Gender</label>
+        <input type="radio" name="rad" id="" value="M">M
+        <input type="radio" name="rad" id="" value="F">F<br>
+        <label for="">Degree</label>
+        <select name="sel1">
+            <option value=""></option>
+            <option value="BSc">BSc</option>
+            <option value="BCom">BCom</option>
+            <option value="Btech">Btech</option>
+        </select><br>
+        <label for="">Department</label>
+        <select name="sel2">
+            <option value=""></option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="MECH">MECH</option>
+            <option value="IT">IT</option>
+
+        </select><br>
+        <button type="submit">submit</button><br>
+        <!-- 
+        <button type="button" onclick="resetValue(event)">newValue</button> -->
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>MobileNumber</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Degree</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
+    <div>
+
+    </div>
+
+    <!-- <script>
+       //Method1: using append child
+        function formSub(e) {
+            e.preventDefault();
+            var t = document.querySelector('table');
+            var a = document.forms['myform']['name'].value;
+            var b = document.forms['myform']['mobnum'].value;
+            var c = document.forms['myform']['mail'].value;
+            var d = document.forms['myform']['rad'].value;
+            var e = document.forms['myform']['sel1'].value;
+            var f = document.forms['myform']['sel2'].value;
+            
+            var tr = document.createElement('tr');
+            var td1 = tr.appendChild(document.createElement('td'));
+            var td2 = tr.appendChild(document.createElement('td'));
+            var td3 = tr.appendChild(document.createElement('td'));
+            var td4 = tr.appendChild(document.createElement('td'));
+            var td5 = tr.appendChild(document.createElement('td'));
+            var td6 = tr.appendChild(document.createElement('td'));
+            td1.innerHTML = a;
+            td2.innerHTML = b;
+            td3.innerHTML = c;
+            td4.innerHTML = d;
+            td5.innerHTML = e;
+            td6.innerHTML = f;
+            
+            t.appendChild(tr);
+            console.log(tr);
+        }
+
+
+        function resetValue(e) {
+            e.preventDefault();
+            const form = document.querySelector('#myform');
+            form.reset(); 
+        }
+
+    </script> -->
+
+    <!-- <script>
+        //[{},{},{}] obj inside arr
+        var ans = [];
+
+        div = document.querySelector('div');
+        function formSub(e) {
+            e.preventDefault();
+            var a = document.forms["myform"]["name"].value;
+            var b = document.forms["myform"]["mobnum"].value;
+            var c = document.forms["myform"]["mail"].value;
+            var d = document.forms["myform"]["rad"].value;
+            var e = document.forms["myform"]["sel1"].value;
+            var f = document.forms["myform"]["sel2"].value;
+            // ans += '<tr>'+aa+'\t'+b+'\t'+c+'\t'+d+'\t'+e+'\t'+f;
+            ans += ['\n' + a + '<td>' + b + '<td>' + c + '<td>' + d + '<td>' + e + '<td>' + f + '\n'];
+            // ans += {a+'<td>'+b+'<td>'+c+'<td>'+d+'<td>'+e+'<td>'+f};
+
+            console.log(ans);
+
+            for (let i = 0; i < 6; i++) {
+
+                t.innerHTML = ans;
+            }
+
+        }
+
+    </script> -->
+
+    <!-- <script>
+
+        var count = 0;
+        var arrobj = [];
+        function formSub(e) {
+            count++;
+            e.preventDefault();
+            var div = document.querySelector('div');
+            var a = document.forms['myform']['name'].value;
+            var b = document.forms['myform']['mobnum'].value;
+            var c = document.forms['myform']['mail'].value;
+            var d = document.forms['myform']['rad'].value;
+            var e = document.forms['myform']['sel1'].value;
+            var f = document.forms['myform']['sel2'].value;
+
+            arrobj.push({ name: a, mobnum: b, mail: c, rad: d, sel1: e, sel2: f });
+
+
+
+            for (let i = 0; i < arrobj.length; i++) {
+                // var sol = 'Name ' + arrobj[i].name + ' MobileNum ' + arrobj[i].mobnum + ' Email ' + arrobj[i].mail + ' Gender ' + arrobj[i].rad + ' Degree ' + arrobj[i].sel1 + ' Department ' + arrobj[i].sel2
+
+                var sol = 'Name ' + arrobj[i].name + ' MobileNum ' + arrobj[i].mobnum + ' Email ' + arrobj[i].mail + ' Gender ' + arrobj[i].rad + ' Degree ' + arrobj[i].sel1 + ' Department ' + arrobj[i].sel2
+                console.log(sol);
+
+                var p = document.createElement('p');
+                p.textContent = sol;
+             
+                
+            }
+            div.appendChild(p);
+
+            console.log(count);
+            //div.innerHTML = sol;
+
+            // for (let i = 0; i < allEntries.length; i++) {
+            //     var sol = 'Name: ' + allEntries[i].name + ', MobileNum: ' + allEntries[i].mobnum + ', Email: ' + allEntries[i].mail + ', Gender: ' + allEntries[i].rad + ', Degree: ' + allEntries[i].sel1 + ', Department: ' + allEntries[i].sel2;
+
+            //     var p = document.createElement('p'); // Create a new paragraph for each entry
+            //     p.textContent = sol;
+            //     div.appendChild(p); // Append the new paragraph to the div
+            // }
+
+            // for (let i = 0; i < count; i++) {
+            //     arrobj= [
+            //         {
+            //             name: a, mobnum: b, mail: c, rad: d, sel1: e, sel2: f
+            //         }
+
+            //     ]
+            // }
+            // var t = document.querySelector("table");
+            // var v1 = document.querySelector(".val1");
+        }
+
+    </script> -->
+
+    <script>
+        //[{},{},....]   arr[{obj1},{obj2},...]
+        var count = 0;
+        var arrobj = [];
+        function formSub(e) {
+            count++;
+            e.preventDefault();
+            var div = document.querySelector('div');
+            var tbody = document.querySelector('table tbody');
+
+            var a = document.forms['myform']['name'].value;
+            var b = document.forms['myform']['mobnum'].value;
+            var c = document.forms['myform']['mail'].value;
+            var d = document.forms['myform']['rad'].value;
+            var e = document.forms['myform']['sel1'].value;
+            var f = document.forms['myform']['sel2'].value;
+
+
+            arrobj.push({ name: a, mobnum: b, mail: c, rad: d, sel1: e, sel2: f });
+
+            var val = '';
+            for (let i = 0; i < arrobj.length; i++) {
+                val += '<tr>' +
+                    '<td>' + arrobj[i].name + '</td> ' +
+                    '<td>' + arrobj[i].mobnum + '</td>' +
+                    '<td>' + arrobj[i].mail + '</td>' +
+                    '<td>' + arrobj[i].rad + '</td>' +
+                    '<td>' + arrobj[i].sel1 + '</td>' +
+                    '<td>' + arrobj[i].sel2 + '</td>' +
+                    '<tr>'
+                    ;
+            }
+
+            tbody.innerHTML = val;
+
+            console.log(count);
+            console.log(arrobj); 
+            console.log(typeof(arrobj)); //array
+            console.log(typeof(arrobj[0])); //object
+            
+        }
+
+    </script>
+
+</body>
+
+</html>

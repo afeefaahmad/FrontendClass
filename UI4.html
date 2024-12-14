@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .cont{
+            position: relative;
+            display: grid;
+            margin: 20px;
+            grid-template-columns: auto auto auto auto auto;
+           
+        }
+        .c1{
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            background-color: aquamarine;
+        }
+        .c1:hover {
+            
+            box-shadow:4px 4px 5px 5px navy;
+        }
+        .c2{
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            background-color: aquamarine;
+            
+        }
+        .c2:hover{
+            transition: 4s ease-in-out;
+            transform:rotate(180deg);
+        }
+        @keyframes ani1{
+
+        }
+        .c3{
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            background-color: aquamarine;
+        }
+        .c3:hover{
+            transition: 4s ease-in-out;
+            transform: rotateX(360deg);
+        }
+        .c3:hover{
+            transition: 4s ease-in-out;
+            transform: rotateX(360deg);
+        }
+        .c4{
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            background-color: aquamarine;
+        }
+        .c4:hover{
+            transition: 3s ease-in-out;
+            transform: SkewX(30deg);
+        }
+        
+        .c5{
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            background-color: aquamarine;
+        }
+        .c5:hover{
+            transition: 3s ease-in-out;
+            transform: SkewY(30deg);
+        }
+        
+        .rel{
+            height: 100px;
+            width: 100px;
+            margin-left: 20px;
+            padding:10px;
+            background-color: pink;
+            position: relative;
+        }
+        .abs{
+            height: 100px;
+            width: 100px;
+            top:0;
+            left:0;
+            padding:10px;
+            background-color: rgb(202, 143, 202);
+            position: absolute;
+        }
+        .abs:hover{
+            top:30px;
+            left:30px;
+            transition:  ease-in-out 1s ;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="c1">Box Shadow</div>
+        <div class="c2">2D Rotate</div>
+        <div class="c3">3D Rotate</div>
+        <div class="c4">SkewX</div>
+        <div class="c5">SkewY</div>
+    </div>
+   
+    <div class="rel">Relative
+    <div class="abs">Absolute</div>
+    </div>
+    
+    
+</body>
+</html>

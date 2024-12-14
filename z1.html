@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    .grid-container {
+      background: #eee;
+      max-width: 900px;
+      margin: 0px auto;
+      display: grid;
+      /* grid-template-columns: auto auto auto; */
+      /* grid-template-columns: 200px 200px 200px; */
+      /* grid-template-columns: 1fr 1fr 1fr; */
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 100px 200px 300px;
+      gap:10px; 
+      justify-items: stretch; /*default for col*/
+      /* justify-items: end; */
+      align-items: stretch /*default for row*/ ;
+      /* align-items: start; */
+
+    }
+
+    .grid-container >div {
+      background-color: #ccc;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid black;
+    }
+    .grid-container > div:nth-child(1){
+      grid-column: 1 / span 2;
+      /* grid-column: starting col num/ number of col; */
+    }
+    .grid-container > div:nth-child(2) {
+      grid-column: span 3;
+    }
+    .grid-container > div:nth-child(3) {
+      grid-column: span 1;
+    }
+    .grid-container > div:nth-child(4) {
+      grid-column: 2 / 6;
+      align-self: end;
+    }
+    .grid-container > div:nth-child(5){
+      grid-column: span 3;
+    }
+    .grid-container > div:nth-child(6) {
+      grid-column: span 3;
+      justify-self: end;
+      /* align-self: start; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+</body>
+
+</html>

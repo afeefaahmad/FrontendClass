@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="dat">Table</div>
+    <button type="button" onclick="hndlClk()">Click me</button>
+    <!-- <p>Para tag</p> -->
+    <input type="text" name="" id="inpfield" placeholder="Hello">
+    <p id="p1"> table val</p>
+
+    <!-- <script>
+        // document.querySelector('#dat').style.color = 'red';
+        // document.getElementById('inpfield').value = "Hello";
+
+        let a = document.getElementById('dat');
+        a.innerHTML = "Heading by JS";
+        a.style.color = 'blue';
+        a.style.backgroundColor = "grey";
+
+        document.querySelector('#inpfield').value="hii";
+        
+    </script> -->
+
+    <script>
+        // function hndlClk() {
+        //     var v = document.getElementById('inpfield').value;
+        //     console.log(v);
+        //     document.getElementById('dat').innerHTML = v;
+        // }
+        function hndlClk() {
+            var ans = '';
+            var v = document.getElementById('inpfield').value;
+            for (let i = 1; i <= 10; i++) {
+                console.log(v + "*" + i + "=" + v * i);
+                ans += v + " x " + i + " = " + v * i + '<br>';
+                document.getElementById('p1').innerHTML = ans;
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

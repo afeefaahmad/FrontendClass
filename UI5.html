@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Anima</title>
+    <style>
+        .cont{
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            position: relative;
+        }
+        .ani{
+            
+            width: 50px;
+            height: 50px;
+            /* margin: 20px; */
+            position: absolute;
+            background-color: aqua;
+            animation-name: dell;
+            animation-timing-function: ease-in-out;
+            animation-duration: 4s;
+            animation-iteration-count: 2;
+            animation-direction: normal;
+            /* animation-fill-mode: backwards; */
+            
+            /* animation: moving duration timing-function delay iteration-count direction fill-mode; */
+        }
+
+        @keyframes dell {
+            0%{
+                top: 0;
+                left: 0;
+            }
+            25%{
+                top: 0;
+                left: 350px;
+                transform: rotate(360deg);
+                background-color: white;
+            }
+            50%{
+                top: 350px;
+                left: 350px;
+                transform: rotate(720deg);
+                background-color: greenyellow;
+            }
+            75%{
+                top: 350px;
+                left: 0;
+                transform: rotate(1080deg);
+                background-color:pink;
+            }
+            100%{
+                top: 0px;
+                left: 0;
+                transform: rotate(2160deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cont"><div class="ani"></div></div>
+</body>
+</html>

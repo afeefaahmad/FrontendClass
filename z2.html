@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            max-width: 1200px;
+            margin: 40px auto;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .img {
+            height: 250px;
+            width: 356px;
+            border: 2px solid #eee;
+            text-align: center;
+
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .featured {
+            grid-column: span 3;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        @media screen and (max-width: 980px) {
+            article {
+                grid-column: span 3;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 60px;
+                align-items: center;
+            }
+
+        @media screen and (max-width: 760px) {
+            article, article.featured {
+                display: block;
+                margin: 0 20px;
+            }
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Globe Runner</h1>
+    </header>
+    <main class="grid-container">
+        <article class="featured">
+            <div class="img">img1</div>
+            <div>
+                <h2>Ballon Magic1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt maxime dolores, vero dignissimos
+                    cupiditate animi soluta placeat perferendis esse dolorum necessitatibus harum minus, facere mollitia
+                    nemo unde accusantium sint cumque!</p>
+            </div>
+        </article>
+        <article>
+            <div class="img">img2</div>
+            <div>
+                <h2>Ballon Magic2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt maxime dolores, vero dignissimos
+                    cupiditate animi soluta placeat perferendis esse dolorum necessitatibus harum minus, facere mollitia
+                    nemo unde accusantium sint cumque!</p>
+            </div>
+        </article>
+        <article>
+            <div class="img">img3</div>
+            <div>
+                <h2>Ballon Magic3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt maxime dolores, vero dignissimos
+                    cupiditate animi soluta placeat perferendis esse dolorum necessitatibus harum minus, facere mollitia
+                    nemo unde accusantium sint cumque!</p>
+            </div>
+        </article>
+        <article>
+            <div class="img">img4</div>
+            <div>
+                <h2>Ballon Magic4</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt maxime dolores, vero dignissimos
+                    cupiditate animi soluta placeat perferendis esse dolorum necessitatibus harum minus, facere mollitia
+                    nemo unde accusantium sint cumque!</p>
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>
